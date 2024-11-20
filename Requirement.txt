@@ -1,0 +1,58 @@
+Pygame library for creating graphical interfaces and handling user input.
+pygame==2.5.0
+
+Optional: If you plan to extend the app with more functionality, 
+you might consider adding some additional libraries like these:
+
+Requests (for web interactions, e.g., saving drawings online)
+requests==2.28.1
+
+Pillow (for advanced image handling, e.g., for exporting or manipulating images in more ways)
+Pillow==9.3.0
+
+NumPy (for performing advanced mathematical operations, could be useful for manipulating drawing data)
+numpy==1.23.5
+
+PyQt5 (for building more complex graphical interfaces, could be used to create file dialogs)
+pyqt5==5.15.9
+
+If using file dialogs for saving/loading (you can integrate it with `tkinter` or PyQt for GUI elements):
+tkinter (This is built into Python, so it might not need to be listed, but if you're using it separately):
+tkinter==0.1.0
+
+
+Explanation of Dependencies:
+
+1. Pygame:  
+   - `pygame` is the only mandatory library for your project. It provides the tools for creating the graphical window, handling mouse events, drawing shapes, and more.
+   - Version `2.5.0` is a stable release and is listed as the default version, though you can update it if required (or use a specific version that fits your environment).
+
+2. Optional Libraries:
+   - Requests: Useful if you decide to add web-related functionality, like uploading the drawing to a server or fetching data from the web.
+   - Pillow: This library allows for advanced image manipulation, which could be useful for enhancing the saving functionality (e.g., adding watermarks, adjusting image resolution, etc.).
+   - NumPy: Although not directly required, NumPy could be helpful if you're handling complex image data or performing calculations for more advanced drawing algorithms.
+   - PyQt5: If you want to upgrade the user interface to something more sophisticated than the current implementation, PyQt5 is a popular library for building graphical desktop applications in Python.
+   - Tkinter: This is another Python library, often bundled with Python installations, that can be used for creating more advanced GUI elements like file dialogs, buttons, or other widgets.
+
+### How to Use the `requirements.txt`:
+
+1. Create a new file called `requirements.txt` in the root directory of your project.
+2. Copy and paste the content above into the `requirements.txt` file.
+3. To install the required dependencies, run the following command in the terminal:
+
+
+pip install -r requirements.txt
+
+
+This will ensure that the exact versions of the libraries are installed, making your project easier to set up for others or on different machines.
+
+Customizing the File:
+
+- If you decide to add additional features, such as saving images in different formats or adding more complex UI elements, you can simply add those libraries to this file.
+- If you're working in a virtual environment (which is recommended), you can also generate this file automatically by running:
+
+
+pip freeze > requirements.txt
+
+
+This will list all the libraries currently installed in your virtual environment, so it’s a useful command once you add extra dependencies.
